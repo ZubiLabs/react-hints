@@ -47,10 +47,10 @@ class Hint extends React.Component {
     window.addEventListener('load', this.update.bind(this));
   }
 
-  componentWillReceiveProps() {
+  componentDidUpdate() {
     this.update();
   }
-
+  
   componentWillUnmount() {
     window.removeEventListener('resize', this.update.bind(this));
     window.removeEventListener('load', this.update.bind(this));
